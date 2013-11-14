@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery List Search</title>
+  <script src="./jquery.min.js"></script>
+</head>
+<body>
+  <form>
+    <input type="text" class="js-search-list" data-search-list-id="search-list">
+  </form>
+
+  <ul id="search-list">
+    <li>
+      <span class="search-column">Africa, Carribean and Pacific (ACP)</span>
+      <span class="search-column">aama</span>
+    </li>
+    <li>
+      <span class="search-column">Asia and Pacific</span>
+    </li>
+    <li>
+      <span class="search-column">Conspiracy</span>
+    </li>
+  </ul>
+
+  <ul id="search-list-2">
+    <li>
+      <a href="">Link</a>
+    </li>
+    <li>
+      <a href=""><strong>Bold Link</strong></a>
+    </li>
+    <li>
+      Plain
+    </li>
+  </ul>
+
+  <a href="#" class="destroy">Destroy</a>
+  <a href="#" class="initialize">Initialize list 2</a>
+
+  <script src="./jquery-list-search.js"></script>
+  <script>
+    $('.js-search-list').listSearch();
+
+    $(document).on('click', '.destroy', function( event ) {
+      $('.js-search-list').each( function() {
+        console.log( $(this).data('list_search') );
+
+        $(this).data('list_search').destroy();
+
+        console.log( $(this).data('list_search') );
+      });
+
+      event.preventDefault();
+    });
+
+    $(document).on('click', '.initialize', function( event ) {
+      $('.js-search-list').data('search-list-id', 'search-list-2');
+      $('.js-search-list').listSearch();
+    });
+  </script>
+</body>
+</html>
