@@ -1,0 +1,26 @@
+{
+  "name": "jquery-list-search",
+  "main": "jquery-list-search.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mrhenry/jquery-list-search",
+  "authors": [
+    "Yves Van Broekhoven <yvesvanbroekhoven@gmail.com>"
+  ],
+  "description": "Search and filter a list",
+  "keywords": [
+    "jquery",
+    "search",
+    "list"
+  ],
+  "dependencies": {
+    "jquery": "~1.5.0"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
